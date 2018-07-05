@@ -2,7 +2,7 @@
 
 ## Description
 
-description
+укорачиватель ссылок
 
 ## Installation
 
