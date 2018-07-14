@@ -9,12 +9,12 @@ export class CatsController {
 
   @Get()
   findAll() {
-    return 'This action returns all cats';
+    return 'This action returns all cats!';
   }
 
   @Get(':id')
-  findOne(@Param('id') id) {
-    return `This action returns a #${id} cat`;
+  findOne(@Param() params) {
+    return `This action returns a #${params.id} cat!`;
   }
 
   @Put(':id')
