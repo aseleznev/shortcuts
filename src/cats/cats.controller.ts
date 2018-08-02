@@ -4,7 +4,8 @@ import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common'
 export class CatsController {
   @Post()
   create(@Body() createCatDto) {
-    return 'This action adds a new cat';
+    // return 'This action adds a new cat';
+    return createCatDto;
   }
 
   @Get()
@@ -20,6 +21,7 @@ export class CatsController {
   @Put(':id')
   update(@Param('id') id, @Body() updateCatDto) {
     return `This action updates a #${id} cat`;
+    // return updateCatDto;
   }
 
   @Delete(':id')
