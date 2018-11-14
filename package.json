@@ -1,6 +1,6 @@
 {
   "name": "shortcuts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "description",
   "author": "",
   "license": "MIT",
@@ -23,7 +23,8 @@
     "fastify-formbody": "^2.0.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "pg": "^7.6.1"
   },
   "devDependencies": {
     "@nestjs/testing": "^5.0.0",
