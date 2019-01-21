@@ -1,1 +1,1 @@
-{"version":3,"file":"create-link.dto.js","sourceRoot":"","sources":["../../../src/links/dto/create-link.dto.ts"],"names":[],"mappings":";;AAAA;IACE,YAAY,IAAI;QACd,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC,SAAS,CAAC;QAChC,IAAI,CAAC,QAAQ,GAAG,IAAI,CAAC,SAAS,CAAC;IACjC,CAAC;CAGF;AAPD,sCAOC"}
+{"version":3,"file":"create-link.dto.js","sourceRoot":"","sources":["../../../src/links/dto/create-link.dto.ts"],"names":[],"mappings":";;AAAA;IACE,YAAY,IAAI;QACd,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC,SAAS,IAAI,IAAI,CAAC;QACxC,IAAI,CAAC,QAAQ,GAAG,IAAI,CAAC,QAAQ,IAAI,IAAI,CAAC;IACxC,CAAC;CAGF;AAPD,sCAOC"}

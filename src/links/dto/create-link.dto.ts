@@ -1,8 +1,8 @@
 export class CreateLinkDto {
   constructor(init) {
-    this.shortLink = init.shortLink;
-    this.longLink = init.shortLink;
+    this.shortLink = init.shortLink || null;
+    this.longLink = init.longLink || null;
   }
-  longLink: string;
-  shortLink: string;
+  readonly longLink: string;
+  readonly shortLink: string;
 }

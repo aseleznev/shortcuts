@@ -1,11 +1,10 @@
-const { Pool } = require("pg");
+const { Pool } = require('pg');
 
-const connectionString =
-  "postgres://aaseleznev:@localhost:5432/shortcuts";
+const connectionString = 'postgresql://postgres@localhost:5432/shortcuts';
 /*"postgres://YourUserName:YourPassword@localhost:5432/YourDatabase";*/
 
 const pool = new Pool({
-  connectionString: connectionString,
+  connectionString: connectionString
   //ssl: true
 });
 
@@ -14,7 +13,7 @@ module.exports = {
     const start = Date.now();
     return pool.query(text, params, (err, res) => {
       const duration = Date.now() - start;
-      console.log("executed query", { text, duration, rows: res.rowCount });
+      console.log('executed query', { text, duration, rows: res.rowCount });
       callback(err, res);
     });
   },
@@ -30,10 +29,8 @@ module.exports = {
 
       // set a timeout of 5 seconds, after which we will log this client's last query
       const timeout = setTimeout(() => {
-        console.error("A client has been checked out for more than 5 seconds!");
-        console.error(
-          `The last executed query on this client was: ${client.lastQuery}`
-        );
+        console.error('A client has been checked out for more than 5 seconds!');
+        console.error(`The last executed query on this client was: ${client.lastQuery}`);
       }, 5000);
 
       const release = err => {

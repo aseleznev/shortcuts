@@ -27,21 +27,25 @@ let LinksController = class LinksController {
     constructor(linksService) {
         this.linksService = linksService;
     }
-    findOne(params) {
-        return this.linksService.getOne(params.id);
+    findOne(params, result) {
+        return this.linksService
+            .getOne(params.id)
+            .then(res => result.json(res))
+            .catch(err => result.json(err));
     }
     create(createLinkDto, result) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log(createLinkDto);
             return this.linksService.createLink(new create_link_dto_1.CreateLinkDto(createLinkDto)).then(res => result.json(res));
         });
     }
 };
 __decorate([
     common_1.Get(':id'),
-    __param(0, common_1.Param()),
+    __param(0, common_1.Param()), __param(1, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", String)
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
 ], LinksController.prototype, "findOne", null);
 __decorate([
     common_1.Post('/link'),
